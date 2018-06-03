@@ -18,7 +18,7 @@ namespace BKS_GUI
             CSharpCodeProvider codeProvider = new CSharpCodeProvider(providerOptions);
             string Output = Name + ".exe";
             System.CodeDom.Compiler.CompilerParameters parameters = new CompilerParameters();
-            //Make sure we generate an EXE, not a DLL
+            //Add References then make output an exe
             parameters.ReferencedAssemblies.Add("System.Collections.dll");
             parameters.ReferencedAssemblies.Add("System.Collections.Specialized.dll");
             parameters.ReferencedAssemblies.Add("System.Linq.dll");
@@ -27,7 +27,7 @@ namespace BKS_GUI
             parameters.ReferencedAssemblies.Add("System.dll");
             parameters.ReferencedAssemblies.Add("System.Core.dll");
             parameters.CompilerOptions = "/target:winexe";
-
+            //Compile
             parameters.GenerateInMemory = true;
             parameters.GenerateExecutable = true;
             parameters.OutputAssembly = Output;
