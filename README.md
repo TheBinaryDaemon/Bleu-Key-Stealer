@@ -2,7 +2,7 @@
 A program to create stubs that steals whitelist keys for a ROBLOX exploit/cheat called Bleu.  
 
 ### Features
--Base64 Webhook encryption(stops idiots from getting your webhook)  
+-Base64 Webhook encoding(stops idiots from getting your webhook)  
 -Logs the key and compares the current key to the logged key  
 -Only sends whitelisted keys  
 -Loops incase the user changes there key  
